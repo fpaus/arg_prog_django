@@ -1,0 +1,19 @@
+{% extends 'productos/base.html'%}
+{% block titulo %}
+
+    Pagina de Categorias
+
+{% endblock titulo %}
+{% block contenido %}
+
+    <div>Categorias</div>
+    
+    <ul>
+        {% for categoria in categorias %}
+            <li>{{ categoria.nombre }}</li>
+        {% endfor %}
+    </ul>
+
+
+
+{% endblock contenido %}

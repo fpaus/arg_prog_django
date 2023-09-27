@@ -1,0 +1,13 @@
+{% extends 'productos/base.html'%}
+{% block titulo %}
+
+    Agregar producto
+
+{% endblock titulo %}
+{% block contenido %}
+<form method="POST" action="{% url 'agpro' %}">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Enviar</button>
+</form>
+{% endblock contenido %}

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        {% block titulo %}
+        {% endblock titulo %}
+    </title>
+</head>
+<body>
+   <header>
+    <h1>Bienvenidos a la app de Comercio hecha con Django</h1>
+        <nav>
+            <a href="{% url 'inicio' %}">inicio</a>
+            <a href="{% url 'categories' %}">Categorias</a>
+            <a href="{% url 'productos' %}">Productos</a>
+            <a href="{% url 'agpro' %}">Agregar Producto</a>
+            <a href="{% url 'contacto' %}">Contacto</a>
+        </nav>
+    </header>
+    <main>
+        {% block contenido %}
+        {% endblock contenido %}
+    </main>
+</body>
+</html>

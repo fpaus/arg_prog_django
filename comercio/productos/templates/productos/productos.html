@@ -1,0 +1,22 @@
+{% extends 'productos/base.html'%}
+{% block titulo %}
+
+    Pagina de Productos
+
+{% endblock titulo %}
+{% block contenido %}
+
+    <div>Productos de la empresa {{nombre}}</div>
+
+    <ul>
+    {%for producto in cosas%}
+
+        <li>
+            {{producto.nombre}} / {{producto.descripcion}}. Su precio es $ {{producto.precio}}, y actualmente tenemos {{producto.stock}} kilos en stock
+        </li>
+
+
+
+    {%endfor%}
+    </ul>
+{% endblock contenido %}
